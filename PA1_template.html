@@ -121,7 +121,8 @@ $(document).ready(function () {
 
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
-<pre class="r"><code>activity_dat &lt;- read.csv(&quot;/Users/yanze/github/RepData_PeerAssessment1/activity.csv&quot;)
+<pre class="r"><code>unzip(zipfile=&quot;/Users/yanze/github/RepData_PeerAssessment1/activity.zip&quot;)
+activity_dat &lt;- read.csv(&quot;/Users/yanze/github/RepData_PeerAssessment1/activity.csv&quot;)
 #print(activity_dat)</code></pre>
 </div>
 <div id="what-is-mean-total-number-of-steps-taken-per-day" class="section level2">
