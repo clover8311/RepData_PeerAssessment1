@@ -67,6 +67,7 @@ print(paste("median steps: ", median_steps))
 
 ## Are there differences in activity patterns between weekdays and weekends?
 ```{r}
+#function to detect weekdays and weekend
 detect_weekdays <- function(date) {
     day <- weekdays(date)
     if (day %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")) {
@@ -74,7 +75,7 @@ detect_weekdays <- function(date) {
     } else if (day %in% c("Saturday", "Sunday")) {
         return("weekend") 
     } else {
-      stop("invalid date")
+      stop("invalid")
     }
 }
 filled_data$date <- as.Date(filled_data$date)

@@ -185,14 +185,15 @@ print(paste(&quot;median steps: &quot;, median_steps))</code></pre>
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
-<pre class="r"><code>detect_weekdays &lt;- function(date) {
+<pre class="r"><code>#function to detect weekdays and weekend
+detect_weekdays &lt;- function(date) {
     day &lt;- weekdays(date)
     if (day %in% c(&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;)) {
         return(&quot;weekday&quot;) 
     } else if (day %in% c(&quot;Saturday&quot;, &quot;Sunday&quot;)) {
         return(&quot;weekend&quot;) 
     } else {
-      stop(&quot;invalid date&quot;)
+      stop(&quot;invalid&quot;)
     }
 }
 filled_data$date &lt;- as.Date(filled_data$date)
